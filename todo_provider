@@ -1,0 +1,17 @@
+
+import 'package:flutter/material.dart';
+
+import '../models/todo_model.dart';
+
+class ToDoProvider extends ChangeNotifier {
+  List<ToDoModel> _todoList = [];
+
+  List<ToDoModel> get toDoList => _todoList;
+
+  addToDo(ToDoModel toDoModel) {
+    _todoList.add(toDoModel);
+    notifyListeners();
+  }
+
+
+}
